@@ -8,10 +8,13 @@ import { ROUTES } from './app/routes';
 import { environment } from './environments/environment';
 
 if (environment.production) {
+  console.log('PRODUCTION BUILD')
   enableProdMode();
 }
 
+console.log("ENV VARS", environment.auth0);
 bootstrapApplication(AppComponent, {
+
   providers:[
     importProvidersFrom(
       RouterModule.forRoot(ROUTES),

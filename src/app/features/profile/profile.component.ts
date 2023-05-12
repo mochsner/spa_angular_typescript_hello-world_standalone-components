@@ -12,10 +12,14 @@ import { CodeSnippetComponent } from 'src/app/shared/components/code-snippet.com
   templateUrl: './profile.component.html',
 })
 export class ProfileComponent {
+
   title = 'Decoded ID Token';
 
   user$ = this.authService.user$;
   code$ = this.user$.pipe(map((user) => JSON.stringify(user, null, 2)));
 
-  constructor(private authService: AuthService) {}
+
+  constructor(private authService: AuthService) {
+    console.log('ProfileComponent(authService:',authService);
+  }
 }

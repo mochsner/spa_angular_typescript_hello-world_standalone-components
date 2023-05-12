@@ -15,8 +15,10 @@ export class ProtectedComponent implements OnInit {
   constructor(public messageService: MessageService) {}
 
   ngOnInit(): void {
+    console.log('ProtectedComponent.ngOnInit');
     this.messageService.getProtectedResource().subscribe((response) => {
       const { data, error } = response;
+      console.log('this.messageService.getProtectedResource(response:',response);
 
       if (data) {
         this.message = JSON.stringify(data, null, 2);

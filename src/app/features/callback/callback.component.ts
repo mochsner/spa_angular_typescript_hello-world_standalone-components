@@ -11,5 +11,7 @@ import { AuthService } from '@auth0/auth0-angular';
 })
 export class CallbackComponent {
   error$ = this.authService.error$;
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService) {
+    console.error('CallbackComponent(authService:',authService);
+  }
 }

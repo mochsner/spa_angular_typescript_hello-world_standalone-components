@@ -12,10 +12,15 @@ import { PageLayoutComponent } from 'src/app/shared/components/page-layout.compo
 export class PublicComponent implements OnInit {
   message = '';
 
-  constructor(public messageService: MessageService) {}
+  constructor(public messageService: MessageService) {
+    console.log('PublicComponent(messageService:',messageService);
+  }
 
   ngOnInit(): void {
+    console.log('ProtectedComponent.ngOnInit');
+
     this.messageService.getPublicResource().subscribe((response) => {
+      console.log('this.messageService.getProtectedResource(response:',response);
       const { data, error } = response;
 
       if (data) {

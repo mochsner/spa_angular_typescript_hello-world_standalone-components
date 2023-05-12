@@ -23,6 +23,7 @@ export class LoginButtonComponent {
         prompt: 'login',
       },
     });
+    console.log('handleLogin done.',this.auth);
   }
 
 }

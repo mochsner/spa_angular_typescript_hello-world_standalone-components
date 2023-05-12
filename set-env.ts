@@ -28,7 +28,7 @@ const envConfigFile = `export const environment = {
   try {
     await writeFilePromisified(targetPath, envConfigFile);
   } catch (err) {
-    console.error(err);
+    console.error('ERROR',err);
     throw err;
   }
 })();
