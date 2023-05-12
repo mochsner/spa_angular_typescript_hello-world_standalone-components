@@ -7,7 +7,12 @@ import { RouterModule } from '@angular/router';
   selector: 'app-mobile-nav-bar-brand',
   template: `
     <div class="mobile-nav-bar__brand">
-      <a (click)="onMobileNavBarBrandClick()" routerLink="/">
+      <!-- <app-mobile-nav-bar-tab
+    path="/home"
+    label="Home"
+    (mobileNavBarTabClick)="onMobileNavBarTabClick($event)"
+    ></app-mobile-nav-bar-tab> -->
+      <!-- <a (click)="onMobileNavBarBrandClick()" routerLink="/">
         <img
           class="mobile-nav-bar__logo"
           src="https://cdn.auth0.com/blog/hub/code-samples/hello-world/auth0-logo.svg"
@@ -15,7 +20,8 @@ import { RouterModule } from '@angular/router';
           width="82"
           height="24"
         />
-      </a>
+      </a> -->
+      <span style="font-size:large">Grocer</span> <!-- TODO: move the HOme click to here -->
     </div>
   `,
 })

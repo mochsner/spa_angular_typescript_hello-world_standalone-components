@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-nav-bar-brand',
   template: `
     <div class="nav-bar__brand">
-      <a routerLink="/">
+      <!-- <a routerLink="/">
         <img
           class="nav-bar__logo"
           src="https://cdn.auth0.com/blog/hub/code-samples/hello-world/auth0-logo.svg"
@@ -15,7 +15,8 @@ import { RouterModule } from '@angular/router';
           width="122"
           height="36"
         />
-      </a>
+      </a> -->
+      <span style="font-size:large">Grocer</span>
     </div>
   `,
 })

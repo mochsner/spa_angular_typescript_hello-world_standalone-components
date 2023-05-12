@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
       [routerLink]="path"
       class="nav-bar__tab"
       routerLinkActive="nav-bar__tab--active"
+      [routerLinkActiveOptions]="{ exact: true }"
     >
       {{ label }}
     </a>
